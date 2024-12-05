@@ -61,6 +61,7 @@ button:active {
 .projects {
   margin: 1rem;
   border: 1px solid #ff0062;
+  border-radius: 4px;
 }
 
 .projects header {
@@ -127,4 +128,5 @@ button:active {
   padding: 1rem;
   border: 1px solid #ff0062;
   background: #f7f7f7;
+  border-radius: 4px;
 }

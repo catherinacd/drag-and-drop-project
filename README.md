@@ -11,7 +11,13 @@ git clone https://github.com/catherinacd/drag-and-drop-project.git
 cd drag-and-drop-project
 npm install
 ```
-3. Run the development server:
+3. Start the TypeScript compiler in watch mode:
+```
+tsc -w 
+```
+This command runs the TypeScript compiler in watch mode, which automatically compiles .ts files into .js files whenever changes are made. It ensures that your codebase stays updated during development.
+
+4. Run the development server:
 ```
 npm start
 ```

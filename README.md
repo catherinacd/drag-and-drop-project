@@ -1,5 +1,5 @@
 # Drag-and-Drop Project
-This project implements a drag-and-drop feature that allows users to interact with elements on the screen in a simple and intuitive manner
+This project implements a drag-and-drop feature that allows users to interact with elements on the screen in a simple and intuitive manner. The primary goal of this project is to practice and improve my TypeScript skills by integrating it into a real-world example.
 
 # Installation:
 1. Clone the repository:

@@ -1,2 +1,17 @@
-# drag-and-drop-project
+# Drag-and-Drop Project
 This project implements a drag-and-drop feature that allows users to interact with elements on the screen in a simple and intuitive manner
+
+# Installation:
+1. Clone the repository:
+```
+git clone https://github.com/catherinacd/drag-and-drop-project.git
+```
+2. Install dependencies:
+```
+cd drag-and-drop-project
+npm install
+```
+3. Run the development server:
+```
+npm start
+```

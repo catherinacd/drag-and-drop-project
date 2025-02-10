@@ -1,3 +1,25 @@
+//  DnD Interfaces
+/**
+ * Interface representing a draggable item.
+ * 
+ * Implement this interface to create a draggable item that can handle
+ * drag start and drag end events.
+ */
+interface Draggable {
+  dragStartHandler(event: DragEvent): void;
+  dragEndHandler(event: DragEvent): void;
+}
+
+/**
+ * Interface representing a target for drag-and-drop operations.
+ * Implement this interface to handle drag-and-drop events.
+ */
+interface DragTarget {
+  dragOverHandler(event: DragEvent): void;
+  dropHandler(event: DragEvent): void;
+  dragLeaveHandler(event: DragEvent): void;
+}
+
 // Project Type
 enum ProjectStatus {
   Active,
@@ -147,7 +169,8 @@ abstract class Component<T extends HTMLElement, U extends HTMLElement> {
 }
 
 // ProjectItem Class
-class ProjectItem extends Component<HTMLUListElement, HTMLLIElement>{
+class ProjectItem extends Component<HTMLUListElement, HTMLLIElement> 
+  implements Draggable {
   private project: Project;
 
   get persons() {
@@ -166,8 +189,18 @@ class ProjectItem extends Component<HTMLUListElement, HTMLLIElement>{
     this.renderContent();
   }
 
+  @autobind
+  dragStartHandler(event: DragEvent): void {
+    console.log('DragStart', event);
+  }
+
+  dragEndHandler(event: DragEvent): void {
+    console.log('DragEnd', event);
+  }
+
   configure(): void {
-    
+    this.element.addEventListener('dragstart', this.dragStartHandler);
+    this.element.addEventListener('dragend', this.dragEndHandler);
   }
 
   renderContent(): void {
